@@ -8,7 +8,7 @@ toolchain:
 	./scripts/init.sh
 
 build-full:
-	WASM_BUILD_TOOLCHAIN=nightly-2020-10-05 cargo build
+	WASM_BUILD_TOOLCHAIN=nightly-2020-10-05 cargo build --release
 
 check:
 	SKIP_WASM_BUILD= cargo check
@@ -25,3 +25,9 @@ purge:
 restart: purge run
 
 init: toolchain build-full
+
+check: 
+	./scripts/check.sh
+
+start-chain: 
+	./target/release/node-template --dev --tmp

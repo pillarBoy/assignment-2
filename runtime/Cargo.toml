@@ -1,5 +1,5 @@
 [package]
-authors = ['Substrate DevHub <https://github.com/substrate-developer-hub>']
+authors = ['pillaBoy <https://github.com/SubstrateDevAcademy/assignment-2-pillarBoy>']
 edition = '2018'
 homepage = 'https://substrate.dev'
 license = 'Unlicense'
@@ -26,6 +26,8 @@ serde = { features = ['derive'], optional = true, version = '1.0.101' }
 
 # local dependencies
 pallet-template = { path = '../pallets/template', default-features = false, version = '2.0.0' }
+pallet-kitties = { path = '../pallets/kitties', default-features = false }
+
 
 # Substrate dependencies
 frame-benchmarking = { default-features = false, optional = true, version = '2.0.0' }
@@ -93,4 +95,5 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'pallet-kitties/std',
 ]
