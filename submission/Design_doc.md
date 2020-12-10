@@ -5,7 +5,7 @@
     - pub fn create_kitty(origin)
 
 - Storages
-    - pub Kitties get(fn kitties): double_map hasher(blake2_128_concat) T::AccountId, hasher(blake2_128_concat) u32 => Option<Kitty>
+    - pub Kitties get(fn get_kitty_by_id): double_map hasher(blake2_128_concat) T::AccountId, hasher(blake2_128_concat) kitty_id => Option<Kitty>
     - NextKittyId: u32
 
 - Types
