@@ -5,11 +5,11 @@
     - pub fn create_kitty(origin)
 
 - Storages
-    - pub Kitties get(fn get_kitty_by_id): double_map hasher(blake2_128_concat) T::AccountId, hasher(blake2_128_concat) kitty_id => Option<Kitty>
+    - pub Kitties get(fn get_kitty_by_id): map hasher(blake2_128_concat) u32 => Option<Kitty<T>>
     - NextKittyId: u32
 
 - Types
-    - struct Kitty(pub [u8; 16])
+    - struct Kitty<T> { dna: [u8;  16], owner: T }
 
 - Events
     - KittyCreated

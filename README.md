@@ -211,6 +211,9 @@ by appending your own. A few useful ones are as follow.
 
 ```json
 {
-    "kitty": "[u8; 16]"
+  "Kitty": {
+    "dna": "[u8;16]",
+    "owner": "AccountId"
+  }
 }
 ```
